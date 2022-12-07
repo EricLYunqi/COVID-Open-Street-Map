@@ -1,0 +1,7 @@
+{
+    "RTT_Studio.Build.Parallel_Jobs": "8",
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp"
+    }
+}

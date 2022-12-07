@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {{map.header.render|safe}}
+	<li><a href="{% url 'mainmap'%}">回到主地图</a></li>
+	<li><a href="{% url 'showmap'%}">回到导航地图</a></li>
+	<li><a href="{% url 'visualmap'%}">回到数据可视化地图</a></li>
+	<li><a href="{% url 'charts_1'%}">展示直方图表</a> <a href="{% url 'charts_2'%}">展示象形柱图</a> <a href="{% url 'charts_3'%}">展示散点图</a></li>
+</head>
+<body>
+	{% if map %}
+
+  	{{map.html.render|safe}}
+  	<script>
+    	{{map.script.render|safe}}
+
+  	</script>
+	{% endif %}
+</body>
+</html>

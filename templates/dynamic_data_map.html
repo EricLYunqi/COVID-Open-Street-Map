@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <form  action="http://127.0.0.1:8000/mainmap/show/JSON" method="POST" enctype="multipart/form-data">
+      <!--name是必须的，后面可以价格multiple表示多选文件-->
+         {% csrf_token %}
+    <input type="file" name="upload_file1" id="file_id1" accept=".json" > <!--选择文件的按钮<-->
+    <input type="submit" value="提交JSON文件">
+    </form>
+
+    <form  action="http://127.0.0.1:8000/mainmap/show/CSV" method="POST" enctype="multipart/form-data">
+      <!--name是必须的，后面可以价格multiple表示多选文件-->
+         {% csrf_token %}
+    <input type="file" name="upload_file2" id="file_id2" accept=".csv" > <!--选择文件的按钮<-->
+    <input type="submit" value="提交CSV文件（重命名为data.csv）">
+    </form>
+
+    <form  action="http://127.0.0.1:8000/mainmap/show/XLSX" method="POST" enctype="multipart/form-data">
+      <!--name是必须的，后面可以价格multiple表示多选文件-->
+         {% csrf_token %}
+    <input type="file" name="upload_file3" id="file_id3" accept=".xlsx" > <!--选择文件的按钮<-->
+    <input type="submit" value="提交XLSX文件（重命名为data.xlsx）">
+    </form>
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>

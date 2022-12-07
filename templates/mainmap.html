@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {{map.header.render|safe}}
+	<li><a href="{% url 'showmap'%}">地图导航</a></li>
+    <li><a href="{% url 'visualmap'%}">人口数据可视化地图</a></li>
+    <li><a href="{% url 'dynamic'%}">自定义数据可视化地图</a></li>
+	<li><a href="{% url 'covidmap'%}">新冠数据可视化地图</a></li>
+
+</head>
+<body>
+	{% if map %}
+
+  	{{map.html.render|safe}}
+  	<script>
+    	{{map.script.render|safe}}
+
+  	</script>
+	{% endif %}
+</body>
+</html>
+

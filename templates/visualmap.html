@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {{map.header.render|safe}}
+	<li><a href="{% url 'mainmap'%}">主地图</a></li>
+    <li><a href="{% url 'showmap'%}">地图导航</a></li>
+</head>
+<body>
+	{% if map %}
+
+  	{{map.html.render|safe}}
+  	<script>
+    	{{map.script.render|safe}}
+
+  	</script>
+	{% endif %}
+</body>
+</html>
+
